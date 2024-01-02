@@ -17,19 +17,63 @@ export default [
     category: [
       {
         name: 'Overview',
-        posts: [{ overview: 'Overview' }, { installation: 'Installation' }],
-      },
-      {
-        name: 'Markdown',
         posts: [
-          { markdown: 'Markdown' },
-          { 'code-block': 'Code Block' },
-          { plugins: 'Plugins' },
+          { overview: 'Overview' },
+          { 'why-zely': 'Why Zely' },
+          { 'getting-started': 'Getting Started' },
         ],
       },
       {
         name: 'Routing',
-        posts: [{ routing: 'Routing' }],
+        posts: [
+          { routing: 'Routing' },
+          { methods: 'Methods' },
+          { context: 'Context' },
+          { 'page-data': 'Page Data' },
+          {
+            'customizing-response': 'Customizing Response',
+          },
+          {
+            'data-fetching': 'Data Fetching',
+          },
+        ],
+      },
+      {
+        name: 'Middleware',
+        posts: [{ middleware: 'Middleware' }, { auto: 'Auto Mode' }],
+      },
+      {
+        name: 'Build',
+        posts: [
+          { build: 'Build' },
+          { 'zely-build': 'zely/build' },
+          { 'zely-builder': '@zely/builder' },
+        ],
+      },
+      {
+        name: 'Community',
+        posts: [
+          { community: 'Community' },
+          { contributing: 'Contributing' },
+          { playground: 'Playground' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'plugins',
+    category: [
+      {
+        name: 'Overview',
+        posts: [{ overview: 'Overview' }, { installation: 'Installation' }],
+      },
+      {
+        name: 'Plugins',
+        posts: [{ cors: '@zely/plugin-cors' }],
+      },
+      {
+        name: 'Custom',
+        posts: [{ 'create-plugin': 'Create Plugin' }],
       },
     ],
   },

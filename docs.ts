@@ -25,16 +25,16 @@ export interface Docs {
 }
 
 export default {
-  name: 'Documentation',
-  description: 'Beautiful, Simple<br/>Documentation Template',
+  name: 'zelyjs',
+  description: 'Build Productive,<br>Convenient, Fast Backend',
   index: [
     {
-      content: 'Overview',
-      href: '/docs/overview',
+      content: 'Getting Started',
+      href: '/docs/getting-started',
     },
     {
-      content: 'Installation',
-      href: '/docs/installation',
+      content: 'Why Zely?',
+      href: '/docs/why-zely',
     },
   ],
   header: [
@@ -43,30 +43,40 @@ export default {
       type: 'popover',
       children: [
         {
-          title: 'Overview',
-          href: '/docs/overview',
-          description: 'Introduction about this template.',
+          title: 'Installation',
+          href: '/docs/getting-started',
+          description: 'Start your fist app.',
           // https://remixicon.com/icon/book-open-line
-          icon: 'ri-book-open-line',
+          icon: 'ri-guide-line',
         },
         {
-          title: 'Installation',
-          href: '/docs/installation',
-          description: 'Learn how to install this template.',
+          title: 'Docs',
+          href: '/docs/overview',
+          description: 'Learn all of information of package.',
           // https://remixicon.com/icon/book-open-line
           icon: 'ri-book-open-line',
         },
       ],
     },
     {
-      title: 'Markdown',
-      type: 'link',
-      href: '/docs/markdown',
-    },
-    {
-      title: 'Blog',
-      type: 'link',
-      href: '/blog',
+      title: 'Community',
+      type: 'popover',
+      children: [
+        {
+          title: 'Contribute',
+          href: '/docs/contributing',
+          description: 'thank you for your contribution.',
+          // https://remixicon.com/icon/book-open-line
+          icon: 'ri-sticky-note-line',
+        },
+        {
+          title: 'Blog',
+          href: '/blog',
+          description: 'Our development blog',
+          // https://remixicon.com/icon/book-open-line
+          icon: 'ri-book-open-line',
+        },
+      ],
     },
   ],
 } as Docs;

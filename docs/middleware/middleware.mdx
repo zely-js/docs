@@ -1,0 +1,43 @@
+The zely is based on the [osik](/apis/osik) aimed at light weight and speed.
+Reading the [osik documentation](/apis/osik) will help you understand.
+
+## Middleware Usage
+
+Middleware in Zely is a function that has access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
+Here's an example of a middleware function:
+
+```ts [title="middlewares/message.ts"]
+import { Middleware } from 'zely';
+
+export const Message: Middleware = (req, res, next) => {
+  (req as any).message = 'Hello World!';
+  next();
+};
+```
+
+```ts [title="pages/index.ts"]
+import { ZelyRequest, ZelyResponse } from 'zely';
+
+export function get(req: ZelyRequest, res: ZelyResponse) {
+  res.end((req as any).message);
+}
+```
+
+This middleware function, named Message, adds a property message to the request object and assigns it the value 'Hello World!'. The next() function call is used to pass control to the next middleware function.
+
+### Middleware Registration
+
+To use the middleware, you need to add it to the config.middlewares array in your Zely configuration file:
+
+```ts [title="zely.config.ts"]
+import { Message } from './middlewares/message';
+
+export default defineConfig({
+  middlewares: [Message],
+  // ...
+});
+```
+
+## Auto Mode
+
+See [next page](/docs/auto).
